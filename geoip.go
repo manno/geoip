@@ -255,7 +255,7 @@ func (gi *GeoIP) GetRegion(ip string) (string, string) {
 }
 
 // Returns the region name given a country code and region code
-func GetRegionName(countryCode, regionCode string) string {
+func GetRegionName(countryCode string, regionCode string) string {
 
 	cc := C.CString(countryCode)
 	defer C.free(unsafe.Pointer(cc))
